@@ -1,6 +1,8 @@
 # Lista-Produtos
-#Instruções de execução do sistema#
+#Instruções de execução do sistema
 ******************************************
+
+Extraia os arquivos execute os passos abaixo. As bibliotecas já estão no pacote.
 
 1 - Para executar o Sistema  deve-se ter o node.js instalado.
 2 - O backend é rodado separadamente(portas diferentes) do frontend para simular as requisições entre 
