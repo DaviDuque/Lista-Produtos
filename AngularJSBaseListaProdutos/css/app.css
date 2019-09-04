@@ -1,0 +1,25 @@
+
+		.jumbotron{
+			width: 100%;
+			min-height: 600px;
+			margin-top: 5px;
+			padding: 20px;
+		}
+		.table{
+			margin-top: 20px;
+		}
+		.form-control{
+			margin-top: 5px;
+		}
+		.btn{
+			margin-top: 10px;
+		}
+		.selecionado{
+		background-color: orange;
+		}
+		.row{
+			margin: 40px;
+		}
+		.personalCor{
+			color: orange;
+		}

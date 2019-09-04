@@ -1,0 +1,46 @@
+	<div class="jumbotron">
+		<h3>{{app}}</h3>
+		<input class="form-control" type="text" ng-model="criterioDeBusca" name="nome" placeholder="Buscar por produtos"/>
+		{{mensagem}}
+		<table class="table" ng-show="produtos.length > 0">
+			<tr ng-class="{selecionado: produto.selecionado}" ng-repeat= "produto in produtos | limitTo:5 | filter: criterioDeBusca | orderBy: criterioDeOrdenacao:direcaoDaOrdenacao">
+				<td>
+					<div class="card" style="width: 90rem;">
+						  <img class="card-img-top" src="{{produto.foto}}" alt="Card image cap">
+						  <div class="card-body">
+							<p class="card-text">{{produto.nome}}</p>
+							<h5 class="card-title">{{produto.descricao}}</h5>
+						  </div>
+						  <div class="card-body">
+						  
+						 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#{{produto.id}}">Adicionar comentário</button>
+							<div id="{{produto.id}}" class="collapse">
+							<form name="comentarioForm" id="some">							
+								<input class="form-control" type="text" ng-model="comentario.nome" name="nome" placeholder="Nome" ng-minlength="10"/>
+								<textarea class="form-control" rows="5" ng-model="comentario.texto" name="texto" placeholder="Digite seu texto" ></textarea>
+								<button class="btn btn-block btn-primary" ng-click="adicionarComentario(comentario, produto.id)">Adicionar comentario</button>
+							</form>
+							</div>
+						  	
+							</div>
+							<div class="card-body"><h5>Comentarios</h5></div>
+							<div class="card-body" ng-repeat="comentario in comentarios | filter:{ id: produto.id }">			
+								<div >
+									<h4>{{comentario.nome}}</h4>
+									<h6><p>{{comentario.texto}}</p></h6>
+								</div>
+							 </div>
+						</div>
+				</td>
+			</tr>
+			
+		</table>
+		<hr/>
+		<br/>
+		<!--<div ng-messages="produtoForm.nome.$error">
+			<div class="alert alert-danger" ng-show="produtoForm.nome.$error.required && produtoForm.nome.$dirty">Preencha o nome!</div>
+			<div class="alert alert-danger" ng-show="produtoForm.telefone.$error.required && produtoForm.nome.$dirty">Preencha o telefone</div>
+			<div class="alert alert-danger" ng-show="produtoForm.nome.$error.minlength">Tem que ter no mínimo 10 caracteres burro</div>
+			<div class="alert alert-danger" ng-show="produtoForm.telefone.$error.pattern && produtoForm.nome.$dirty">Formato invalido, use 99999-9999</div>
+		</div>-->
+</div>

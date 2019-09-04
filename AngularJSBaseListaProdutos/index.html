@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Loja Exemplo</title>
+	  <script src="node_modules/angular-1.4.5/angular.min.js"></script>
+	  <script src="node_modules/angular/angular.min.js"></script>
+	  <script src="node_modules/angular/angular.js"></script>
+	  <script src="node_modules/angular-locale-pt-br/angular-locale_pt-br.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	  <script src="js/app.js"></script>
+	  <script src="js/controllers/homeController.js"></script>
+	  <script src="js/controllers/enderecoController.js"></script>
+	  <script src="js/services/produtosAPIService.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="node_modules/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/app.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  
+	</head>
+	<body>
+		<div class="container ">
+			<div>
+				<h1 class="personalCor">Loja da Gente</h1>
+			</div>
+		  
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a ui-sref="home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a ui-sref="endereco">Nossos Endereços</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contato</a>
+				</li>			  
+			</ul>
+			<ui-view></ui-view>
+		</div>
+		<div ng-include="'paginas/footer.html'"></div>
+	</body>
+</html>

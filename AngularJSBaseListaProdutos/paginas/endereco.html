@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+	<div class="list-group">
+		<div class="list-group-item list-group-item-action flex-column align-items-start active">   
+			<p class="mb-1">Conheça nossas Lojas</p>   
+		</div>
+		<div class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="endereco in enderecos">
+			<div class="d-flex w-100 justify-content-between">
+				<h4 class="mb-1 personalCor">{{endereco.store}}</h4>
+			</div>   
+			<p class="mb-3">{{endereco.address}}</p>
+		</div>
+	</div>
+</div>
