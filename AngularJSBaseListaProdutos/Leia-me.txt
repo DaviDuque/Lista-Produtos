@@ -1,18 +1,20 @@
-##Instruções de execução do sistema##
+##Esse sistema Ã© apenas uma demostraÃ§Ã£o simples de interaÃ§Ã£o Nodejs e AngularJS##
+
+##InstruÃ§Ãµes de execuÃ§Ã£o do sistema##
 
 1 - Para executar o Sistema  deve-se ter o node.js instalado.
-2 - O backend é rodado separadamente(portas diferentes) do frontend para simular as requisições entre 
+2 - O backend Ã© rodado separadamente(portas diferentes) do frontend para simular as requisiÃ§Ãµes entre 
      locais diferentes
 
 ******************Frontend*****************
 
 1 - O Frontend foi desenvolvido com angularJS e Bootstrap
-2 - É indicado que utilize o http-server para executar o frontend
-3 - Instalação na raiz do projeto -> $ npm install http-server
-4 - execução -> $ http-server
+2 - Ã‰ indicado que utilize o http-server para executar o frontend
+3 - InstalaÃ§Ã£o na raiz do projeto -> $ npm install http-server
+4 - execuÃ§Ã£o -> $ http-server
 
 *****************Backend*******************
 
-1 - Acessar pela linha de comando diretório /backend
+1 - Acessar pela linha de comando diretÃ³rio /backend
 2 - Executar comando -> $node http1
-3 - O arquivo http1.js cria um servidor e API.
+3 - O arquivo http1.js cria um servidor API.
